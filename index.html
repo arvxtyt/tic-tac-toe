@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="popup" class="hide">
+      <h1 id="popuptext">aaaa</h1>
+    </div>
+    <div class="left">
+      <div class="info">
+        <div id="title">
+          <h1>Tic-tac-toe 3D</h1>
+        </div>
+        <div id="buttons">
+          <img src="./public/back-arrow.svg" id="back">
+          <img src="./public/restart.svg" id="restart">
+        </div>
+      </div>
+      <div class="field">
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">A</td>
+              <td class="countsign">B</td>
+              <td class="countsign">C</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="000"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="001"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="002"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="010"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="011"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="012"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="020"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="021"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="022"></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">D</td>
+              <td class="countsign">E</td>
+              <td class="countsign">F</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="100"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="101"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="102"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="110"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="111"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="112"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="120"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="121"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="122"></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">G</td>
+              <td class="countsign">H</td>
+              <td class="countsign">I</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="200"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="201"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="202"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="210"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="211"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="212"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="220"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="221"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="222"></div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="botSlider">
+        <h3>Play with computer: </h3>
+        <input type="checkbox" id="bot">
+      </div>
+      <div class="rules">
+        <h1 id="rulestitle">RULES</h1>
+        <p>In 3D Tic-Tac-Toe, players take turns placing their marks (X or O) on a 3x3x3 grid. The goal is to get three of your marks in a row vertically, horizontally, or diagonally across any of the three layers, or diagonally through the layers. The game continues until one player achieves this goal or the grid is full, resulting in a draw.</p>
+      </div>
+    </div>
+    <div class="right">
+      <canvas id="cube"></canvas>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
