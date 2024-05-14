@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-MXemSx5y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DoSBHGcg.css">
+  </head>
+  <body>
+    <div id="popup" class="hide">
+      <h1 id="popuptext">aaaa</h1>
+    </div>
+    <div class="left">
+      <div class="info">
+        <div id="title">
+          <h1>Tic-tac-toe 3D</h1>
+        </div>
+        <div id="buttons">
+          <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='iso-8859-1'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23000000'%20height='800px'%20width='800px'%20version='1.1'%20id='Capa_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20viewBox='0%200%2026.676%2026.676'%20xml:space='preserve'%3e%3cg%3e%3cpath%20d='M26.105,21.891c-0.229,0-0.439-0.131-0.529-0.346l0,0c-0.066-0.156-1.716-3.857-7.885-4.59%20c-1.285-0.156-2.824-0.236-4.693-0.25v4.613c0,0.213-0.115,0.406-0.304,0.508c-0.188,0.098-0.413,0.084-0.588-0.033L0.254,13.815%20C0.094,13.708,0,13.528,0,13.339c0-0.191,0.094-0.365,0.254-0.477l11.857-7.979c0.175-0.121,0.398-0.129,0.588-0.029%20c0.19,0.102,0.303,0.295,0.303,0.502v4.293c2.578,0.336,13.674,2.33,13.674,11.674c0,0.271-0.191,0.508-0.459,0.562%20C26.18,21.891,26.141,21.891,26.105,21.891z'/%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3cg%3e%3c/g%3e%3c/g%3e%3c/svg%3e" id="back">
+          <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23000000'%20width='1px'%20height='1px'%20viewBox='-7.5%200%2032%2032'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3erestart%3c/title%3e%3cpath%20d='M15.88%2013.84c-1.68-3.48-5.44-5.24-9.040-4.6l0.96-1.8c0.24-0.4%200.080-0.92-0.32-1.12-0.4-0.24-0.92-0.080-1.12%200.32l-1.96%203.64c0%200-0.44%200.72%200.24%201.040l3.64%201.96c0.12%200.080%200.28%200.12%200.4%200.12%200.28%200%200.6-0.16%200.72-0.44%200.24-0.4%200.080-0.92-0.32-1.12l-1.88-1.040c2.84-0.48%205.8%200.96%207.12%203.68%201.6%203.32%200.2%207.32-3.12%208.88-1.6%200.76-3.4%200.88-5.080%200.28s-3.040-1.8-3.8-3.4c-0.76-1.6-0.88-3.4-0.28-5.080%200.16-0.44-0.080-0.92-0.52-1.080-0.4-0.080-0.88%200.16-1.040%200.6-0.72%202.12-0.6%204.36%200.36%206.36s2.64%203.52%204.76%204.28c0.92%200.32%201.84%200.48%202.76%200.48%201.24%200%202.48-0.28%203.6-0.84%204.16-2%205.92-7%203.92-11.12z'%3e%3c/path%3e%3c/svg%3e" id="restart">
+        </div>
+      </div>
+      <div class="field">
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">A</td>
+              <td class="countsign">B</td>
+              <td class="countsign">C</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="000"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="001"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="002"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="010"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="011"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="012"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="020"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="021"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="022"></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">D</td>
+              <td class="countsign">E</td>
+              <td class="countsign">F</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="100"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="101"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="102"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="110"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="111"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="112"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="120"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="121"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="122"></div></td>
+            </tr>
+          </table>
+        </div>
+        <div class="fieldspace">
+          <table class="fieldtable">
+            <tr class="countsignletters">
+              <td class="countsign"></td>
+              <td class="countsign">G</td>
+              <td class="countsign">H</td>
+              <td class="countsign">I</td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">1</td>
+              <td class="fieldcolumn"><div class="cell" id="200"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="201"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="202"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">2</td>
+              <td class="fieldcolumn"><div class="cell" id="210"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="211"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="212"></div></td>
+            </tr>
+            <tr class="fieldrow">
+              <td class="countsign">3</td>
+              <td class="fieldcolumn"><div class="cell" id="220"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="221"></div></td>
+              <td class="fieldcolumn"><div class="cell" id="222"></div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="botSlider">
+        <h3>Play with computer: </h3>
+        <input type="checkbox" id="bot">
+      </div>
+      <div class="rules">
+        <h1 id="rulestitle">RULES</h1>
+        <p>In 3D Tic-Tac-Toe, players take turns placing their marks (X or O) on a 3x3x3 grid. The goal is to get three of your marks in a row vertically, horizontally, or diagonally across any of the three layers, or diagonally through the layers. The game continues until one player achieves this goal or the grid is full, resulting in a draw.</p>
+      </div>
+    </div>
+    <div class="right">
+      <canvas id="cube"></canvas>
+    </div>
+  </body>
+</html>
