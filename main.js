@@ -268,12 +268,19 @@ restartButton.addEventListener("click", () => {
 })
 
 backButton.addEventListener("click", () => {
-  const id = moves.pop()
-  removeMove(id, isBlue, cells, document)
-  field[Number(id[0])][Number(id[1])][Number(id[2])] = 0
-  isBlue = !isBlue
-  render(materials, field)
-})
+    const id = moves.pop()
+    removeMove(id, isBlue, cells, document)
+    field[Number(id[0])][Number(id[1])][Number(id[2])] = 0
+    isBlue = !isBlue
+    if (playWithBot) {
+      const id1 = moves.pop()
+      removeMove(id1, isBlue, cells, document)
+      field[Number(id1[0])][Number(id1[1])][Number(id1[2])] = 0
+      isBlue = !isBlue
+    }
+    render(materials, field)
+  }  
+)
 
 cells.forEach(cell => {
   cell.classList.add((isBlue ? "hoverBlue" : 'hoverRed'))
