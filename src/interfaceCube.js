@@ -53,12 +53,13 @@ class InterfaceCube {
     }
 
     resize() {
-        camera.aspect = window.innerWidth / window.innerHeight
-        camera.updateProjectionMatrix()
-        renderer.setSize(window.innerWidth / 2, window.innerHeight)
+        this.camera.aspect = window.innerWidth / window.innerHeight
+        this.camera.updateProjectionMatrix()
+        this.renderer.setSize(window.innerWidth / 2, window.innerHeight)
     }
 
-    render(field) {
+    render(f) {
+      let field = f.board;
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
           for (let k = 0; k < 3; k++) {

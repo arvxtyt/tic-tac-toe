@@ -9,7 +9,6 @@ const restartButton = document.getElementById("restart")
 const backButton = document.getElementById("back")
 const popup = document.getElementById("popup")
 const slider = document.getElementById("bot")
-
 const checkWinner = new CheckWinner()
 const bot = new Bot(5, checkWinner)
 const popupObj = new Popup(popup)

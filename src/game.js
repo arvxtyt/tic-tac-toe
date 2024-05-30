@@ -18,8 +18,7 @@ class Game {
       this.debounceTimeout = undefined
 
       this.interfaceCube.animate()
-      this.interfaceCube.render(this.board.board)
-
+      this.interfaceCube.render(this.board)
     }
   
     switchMove() {
@@ -36,13 +35,14 @@ class Game {
       this.interfaceField.restart()
       this.moveStack.clear()
       this.board.clear()
-      this.interfaceCube.render(this.board.board)
+      this.interfaceCube.render(this.board)
     }
   
     moveBack() {
       if (this.freeze) {
         this.freeze = false
         this.restart()
+        return
       }
   
       const id = this.moveStack.pop()
@@ -59,20 +59,18 @@ class Game {
   
       if (this.playWithBot) {
         this.switchMove()
-        this.interfaceField.update(this.moveStack.stack, this.isBlue)
-      } else {
-        this.interfaceField.update(this.moveStack.stack, this.isBlue)
-        this.switchMove()
       }
 
-      this.interfaceCube.render(this.board.board)
+      this.interfaceField.update(this.moveStack, this.isBlue)
+      this.switchMove()
+      this.interfaceCube.render(this.board)
     }
   
     addMove(id) {
       this.moveStack.push(id)
       this.board.setCell(id, this.isBlue ? 1 : -1)
-      this.interfaceField.update(this.moveStack.stack, this.isBlue)
-      this.interfaceCube.render(this.board.board)
+      this.interfaceField.update(this.moveStack, this.isBlue)
+      this.interfaceCube.render(this.board)
     }
     makeMove(cell) {
       clearTimeout(this.debounceTimeout)
@@ -81,35 +79,29 @@ class Game {
       }, 100)
     }
     move(cell) {
-      
       if (!(this.moveStack.has(cell.id) || this.freeze)) {
-        this.interfaceField.update(this.moveStack.stack, this.isBlue)
-        this.interfaceCube.render(this.board.board)
         this.addMove(cell.id)      
         if (this.checkWinner.checkWon(cell.id, this.isBlue, this.board.board)) {
+        this.popup.showPopup(this.isBlue)
+        this.freeze = true
+        return
+      }
+      this.switchMove()
+      if (this.playWithBot) {
+        const move = this.Bot.botDoMove(this.board.board)
+  
+        this.addMove(move, this.isBlue)
+        if (this.checkWinner.checkWon(move, this.isBlue, this.board.board)) {
           this.popup.showPopup(this.isBlue)
           this.freeze = true
           return
         }
-        this.switchMove()
-        if (this.playWithBot) {
-          const move = this.Bot.botDoMove(this.board.board)
   
-          this.addMove(move, this.isBlue)
-          this.interfaceField.update(this.moveStack.stack, false)
-          this.interfaceCube.render(this.board.board)
-
-          if (this.checkWinner.checkWon(move, this.isBlue, this.board.board)) {
-            this.popup.showPopup(this.isBlue)
-            this.freeze = true
-            return
-          }
-  
-          this.isBlue = true
-        }
+        this.isBlue = true
       }
     }
   }
+}
   
 
 export { Game }

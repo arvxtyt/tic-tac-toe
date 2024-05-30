@@ -1,16 +1,8 @@
-import { InterfaceCube } from "./interfaceCube"
-
 class InterfaceField {
     constructor() {
       this.cells = document.querySelectorAll(".cell")
-      this.initialize(true)
+      this.restart()
     }
-  
-    initialize(isBlue) {
-        this.cells.forEach(cell => {
-            cell.classList.add((isBlue ? "hoverBlue" : 'hoverRed'))
-          })
-    } 
 
     restart() {
       this.cells.forEach((cell) => {
@@ -22,11 +14,12 @@ class InterfaceField {
     }
   
     update(moves, isBlue) {
+        
         this.cells.forEach(cell => {
             cell.classList.remove('blue')
             cell.classList.remove('red')
 
-            if (!moves.includes(cell.id)) {
+            if (!moves.has(cell.id)) {
                 if (!isBlue) {
                     cell.classList.remove('hoverRed')
                     cell.classList.add('hoverBlue')
@@ -56,5 +49,6 @@ class InterfaceField {
         
     }
 }
+
 
 export { InterfaceField }

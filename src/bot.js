@@ -26,13 +26,13 @@ class Bot {
       }
 
       return bestMove[0].toString() + bestMove[1].toString() + bestMove[2].toString()
-}
+    }
 
     minimax(depth, turn, pos, alpha, beta, field_) {
         if (this.checkWinner.checkWon(pos, 1, field_)) {
             return this.maxDepth + 1 - depth;
         }
-      
+    
         if (this.checkWinner.checkWon(pos, -1, field_)) {
             return depth - 1 - this.maxDepth;
         }

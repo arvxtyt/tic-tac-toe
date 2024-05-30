@@ -18,6 +18,10 @@ class MoveStack {
     clear() {
       this.stack = []
     }
+
+    indexOf(obj) {
+      return this.stack.indexOf(obj)
+    }
 }
 
 export { MoveStack }
